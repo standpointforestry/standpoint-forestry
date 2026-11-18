@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+  <title>StandPoint Forestry</title>
+ 
+  <meta
+    name="description"
+    content="StandPoint Forestry provides practical forestry field tools. The current Thinning Plot Tracker supports BAF prism plots, BA and TPA calculations, GPS mapping, offline storage, cloud sync, and field reporting."
+  >
+ 
+  <style>
+    :root {
+      --forest: #173b21;
+      --green: #319b48;
+      --light-green: #e8f5ea;
+      --background: #f4f7f3;
+      --text: #24362a;
+      --muted: #667068;
+      --white: #ffffff;
+      --border: #d7e3d9;
+    }
+ 
+    * {
+      box-sizing: border-box;
+    }
+ 
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--background);
+      color: var(--text);
+      line-height: 1.6;
+    }
+ 
+    header {
+      background: var(--forest);
+      color: var(--white);
+      padding: 64px 20px;
+      text-align: center;
+    }
+ 
+    header h1 {
+      margin: 0;
+      font-size: 2.6rem;
+    }
+ 
+    header p {
+      margin: 10px auto 0;
+      max-width: 650px;
+      font-size: 1.1rem;
+      color: #dcebdd;
+    }
+ 
+    main {
+      width: min(920px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 42px 0 60px;
+    }
+ 
+    .tool-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px;
+      box-shadow: 0 4px 18px rgba(23, 59, 33, 0.06);
+    }
+ 
+    .eyebrow {
+      display: inline-block;
+      color: var(--green);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.8rem;
+    }
+ 
+    h2 {
+      color: var(--forest);
+      margin: 4px 0 8px;
+      font-size: 1.8rem;
+    }
+ 
+    .tool-description {
+      color: var(--muted);
+    }
+ 
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin: 24px 0;
+    }
+ 
+    .feature {
+      background: var(--light-green);
+      border-radius: 10px;
+      padding: 14px 16px;
+      font-weight: 600;
+      color: var(--forest);
+    }
+ 
+    .notice {
+      margin-top: 24px;
+      border-left: 4px solid var(--green);
+      background: #f8fbf8;
+      padding: 16px 18px;
+      color: var(--muted);
+    }
+ 
+    .notice strong {
+      color: var(--forest);
+    }
+ 
+    .links {
+      margin-top: 34px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+ 
+    .button {
+      display: inline-block;
+      text-decoration: none;
+      background: var(--green);
+      color: var(--white);
+      padding: 12px 18px;
+      border-radius: 9px;
+      font-weight: 700;
+    }
+ 
+    .button.secondary {
+      background: var(--white);
+      color: var(--green);
+      border: 1px solid var(--green);
+    }
+ 
+    .support {
+      margin-top: 34px;
+      padding: 22px;
+      text-align: center;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+ 
+    .support h3 {
+      color: var(--forest);
+      margin: 0 0 6px;
+    }
+ 
+    .support a {
+      color: var(--green);
+      font-weight: 700;
+    }
+ 
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.9rem;
+      padding: 0 20px 34px;
+    }
+ 
+    @media (max-width: 650px) {
+      header {
+        padding: 46px 18px;
+      }
+ 
+      header h1 {
+        font-size: 2.1rem;
+      }
+ 
+      .feature-grid {
+        grid-template-columns: 1fr;
+      }
+ 
+      .links {
+        flex-direction: column;
+      }
+ 
+      .button {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+ 
+<body>
+ 
+  <header>
+    <h1>StandPoint Forestry</h1>
+ 
+    <p>
+      Practical forestry field tools designed for simple,
+      efficient data collection in the woods.
+    </p>
+  </header>
+ 
+  <main>
+ 
+    <section class="tool-card">
+ 
+      <span class="eyebrow">
+        Current Field Tool
+      </span>
+ 
+      <h2>Thinning Plot Tracker</h2>
+ 
+      <p class="tool-description">
+        A field-focused tool for collecting and reviewing forestry
+        thinning prism plots, including measurements, calculations,
+        GPS locations, maps, synchronization, and reports.
+      </p>
+ 
+      <div class="feature-grid">
+ 
+        <div class="feature">BAF 10 prism plot collection</div>
+        <div class="feature">Basal area calculations</div>
+        <div class="feature">Trees-per-acre calculations</div>
+        <div class="feature">Average DBH recording</div>
+        <div class="feature">GPS plot locations</div>
+        <div class="feature">Plot mapping</div>
+        <div class="feature">Offline field storage</div>
+        <div class="feature">Cloud synchronization</div>
+        <div class="feature">CSV data export</div>
+        <div class="feature">PDF stand reports</div>
+ 
+      </div>
+ 
+      <div class="notice">
+        <strong>Current scope:</strong>
+        StandPoint Forestry is currently designed specifically for
+        thinning plot collection and analysis. The current version is
+        not intended to represent a complete timber cruising or timber
+        inventory system.
+      </div>
+ 
+      <div class="links">
+        <a class="button" href="privacy.html">
+          Privacy Policy
+        </a>
+ 
+        <a class="button secondary" href="delete-account.html">
+          Account Deletion
+        </a>
+      </div>
+ 
+    </section>
+ 
+    <section class="support">
+      <h3>Support</h3>
+ 
+      <p>
+        Questions about StandPoint Forestry, privacy, or account
+        deletion can be sent to:
+      </p>
+ 
+      <a href="mailto:standpointforestry@gmail.com">
+        standpointforestry@gmail.com
+      </a>
+    </section>
+ 
+  </main>
+ 
+  <footer>
+    &copy; 2026 StandPoint Forestry. All rights reserved.
+  </footer>
+ 
+</body>
+</html>
